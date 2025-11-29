@@ -16,10 +16,10 @@ lsblk  # you will see the increased volume, notedown the fs name
 sudo apt install cloud-guest-utils
 
 # grow the partition
-sudo growpart /dev/xvda 1
+sudo growpart /dev/nvme0n1 1
 
 # Update the file system
-sudo resize2fs /dev/xvda1     
+sudo resize2fs /dev/nvme0n1p1   
 
 # Now check the volumme
 df- h
