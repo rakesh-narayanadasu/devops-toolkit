@@ -24,8 +24,13 @@ FROM alpine AS release
 
 WORKDIR /usr/src/app/
 
+# Create non-root user
+RUN adduser -D -u 1000 appuser
+
 COPY ./products/ ./products/
 COPY --from=builder /usr/src/app/product-catalog/ ./
+
+USER appuser
 
 ENV PRODUCT_CATALOG_PORT=8088
 
