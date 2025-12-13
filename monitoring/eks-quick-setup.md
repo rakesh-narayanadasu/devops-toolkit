@@ -31,7 +31,12 @@ eksctl create nodegroup --cluster=observability \
                         --node-private-networking
 ```
 
-## Update ./kube/config file
+### Update ./kube/config file
 ```
 aws eks update-kubeconfig --name observability
+```
+
+### Delete Cluster
+```
+eksctl delete cluster --name observability
 ```
