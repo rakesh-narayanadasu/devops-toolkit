@@ -26,3 +26,12 @@ df- h
 
 ```
 
+or
+
+```
+sudo growpart /dev/sdb 1
+
+sudo resize2fs /dev/sdb1
+```
+
+
